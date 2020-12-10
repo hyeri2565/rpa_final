@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>완납증명서 자동발행 초기페이지</title>
+</head>
+<body>
+
+<div id="select_page">
+    <h2>원하시는 작업 페이지를 선택해주세요</h2>
+    <form action=" {%  url 'contents' %}" method="POST">
+    {% csrf_token %}
+    <p><input type="submit" value="중계내역 확인"></p>
+    <label for="select">중계번호</label>
+        <select required id='select' name="contentorder">
+            {% for allContent in allContents %}
+            <option value=" {{ allContent.Order }}">{{ allContent.Order }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    <form action="{% url 'contents2' %}">
+        <p><input type="submit" value="중계내역 확인2"></p>
+    </form>
+    <form action="{% url 'step1' %}">
+        <p><input type="submit" value="납부실적 발행 단계1"></p>
+    </form>
+    <form action="{% url 'step2' %}">
+        <p><input type="submit" value="납부실적 발행 단계2"></p>
+    </form>
+</div>
+
+</body>
+</html>

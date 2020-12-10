@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>중계표 내역</title>
+</head>
+<body>
+<div style="background-color:lightgoldenrodyellow;">
+<h2>처리하실 중계번호를 선택해주세요.</h2>
+</div>
+<table>
+    <thead>
+    <td style="text-align:center"><b>중계번호</b></td>
+    <td style="text-align:center"><b>중계내용</b></td>
+    </thead>
+    <tbody>
+{% for x in content_all %}
+
+    <tr>
+    <td><input  style="height:50px;text-align: center;" value="{{x.Order}}"/></td>
+
+    <td><input style="width:700px;height:50px;" value="{{ x.Main }}"/></td>
+    </tr>
+
+{% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>중계내역 확인창</title>
+</head>
+<body>
+<h2>처리하실 중계번호를 선택해주세요.</h2>
+
+
+
+<label for="select">중계번호</label>
+<input id="select" name="order" value="{{ ordervalue }}">
+<!--
+<select required id='select' name="contentorder">
+
+   #
+
+</select>
+-->
+<br><br>
+<div>
+    <textarea name="main" cols="60" rows="5">
+        {{contentvalue.Main}}
+
+    </textarea>
+</div>
+</body>
+</html>

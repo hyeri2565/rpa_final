@@ -1,0 +1,41 @@
+label{
+    width: 120px;
+    display:inline-block;
+
+}
+body{
+    line-height: 1.0em;
+}
+#compnum1{
+    width:30px;
+}
+#button1{
+    width:250px;
+
+}
+
+#addr1{
+    width:500px;
+}
+
+#infor1{
+    width:800px;
+    height: 270px;
+
+}
+#infor11{
+    width:800px;
+    height:200px;
+}
+#infor2{
+    width:600px;
+}
+#left\ box{
+    float:left;
+}
+#right\ box{
+    float: right;
+}
+#select{
+    width:180px;
+}

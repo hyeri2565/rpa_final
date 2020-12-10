@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<title>전기요금 납부실적 증명서발행</title>
+	{% load static %}
+        <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+    </head>
+
+    <body bgcolor="d3d3d0">
+		<!--input 레이블 연결은 id랑 for, input에서 name은 모델링 속성값-->
+		<div id="infor1">
+        <form action='#' method='post'>
+
+            <fieldset>
+
+                <legend><b>[납부자정보]</b></legend>
+		<p>
+		<label for='cusnum'>고객번호</label>
+		<input id='cusnum' class='cusnum' type='text' name='CusNum'>
+		<label for='cusname'>고객명</label>
+		<input id='cusname' value="계***명" type='text' name='CusName'>
+		<label><input type='checkbox' name='PrivateInfo' checked value='confirm'>개인정보보기</label>
+		</p>
+		<p>
+		<label for='idnum'>주민등록번호</label>
+		<input id='idnum' value="*************" type='text' name='IdNum'>
+		<label for='connum'>사업자등록번호</label>
+		<input id='connum' value="  - -   " type='text' name='ConNum'>
+		</p>
+		<p>
+            <label for='conname'>상호(법인명)</label>
+		    <input id='conname' type='text' name='ConName'>
+            <label for='contract'>계약종별</label>
+		    <input id='compnum1' value="100" id='contract' type='text' name='Contract1' >
+            <input id="contract" value="주택용전력" type="text" name="Contract2">
+		</p>
+            <p>
+                <label for='phonenum'>전화번호</label>
+		        <input id='phonenum' type='text' name='PhoneNum'>
+                <label  for='compnum'>발급번호</label>
+		        <input  id='compnum' value="2020-09550" type='text' name='CompNum'>
+            </p>
+
+            <p>
+                <label for='roadaddr'>도로명 주소</label>
+		        <input id='addr1' value="경기도 광명시 ********** ****" id='roadaddr' type='text' name='RoadAddress'>
+
+            </p>
+		        <input id='button1' type='submit' value='납부자정보 변경' style="font-size: 11pt;" >
+
+		</fieldset>
+
+		</form>
+        </div>
+		<!-- action은 폼 기능 알고리즘(함수) 이름-->
+        <div id="infor11">
+        <form action='#'>
+		<fieldset>
+            <legend><b>[신청인정보]</b></legend>
+            <p>
+                <label for='regisname'>신청인</label>
+		        <input id='regisname' type='text' name='RegisName'>
+            </p>
+            <p>
+                <label for="select">대인구분</label>
+                <select required name="IdSelect" id="select">
+                    <option value="주민등록번호" selected>1 주민등록번호</option>
+                    <option value="법인등록번호">2 법인등록번호</option>
+                </select>
+                <label for='regisidnum'>신청인대인번호</label>
+		        <input id='regisidnum' type='text' name='RegisIdNum'>
+            </p>
+            <div id="infor2">
+            <fieldset>
+		    <legend>[사용목적]</legend>
+                <table>
+                    <tr style="vertical-align:top">
+                        <td style="width:200px;border-right:1px solid grey; padding-right:12px; text-align:justify">
+                            <p><input type="radio" name="purpose">세무서 제출용</p>
+                        <p><input type="radio" name="purpose">법원 제출용</p>
+                        </td>
+                        <td style="padding-left:10px"><p><input type="radio" name="purpose">해지 완납 증명서</p>
+                        <p><input type="radio" name="purpose">기타
+                        <input type="text" name="etcpurpose"></p>
+                        </td>
+
+                    </tr>
+                </table>
+            </fieldset>
+            </div>
+            <div id="infor2">
+                <fieldset>
+		        <legend>[전기요금 정보사항]</legend>
+                    <table>
+                        <tr style="vertical-align:top">
+                        <td style="width:200px;border-right:1px solid #d3d3d0; padding-right:12px; text-align:justify">
+                         <p><input type="radio" name="payinfo">전기 요금
+                         </p>
+                         <p>
+                        <input type="radio" name="payinfo">전기 사용량 + 전기 요금
+                         </p>
+                        </td>
+                        <td style="padding-left:10px">
+                         <p>
+                        <input type="radio" name="payinfo">전기 사용량
+                         </p>
+                        </td>
+                        </tr>
+                    </table>
+
+                </fieldset>
+            </div>
+
+            <label for="ym">요금년월</label>
+            <input type="date" value="2019-01-08" id="ym" name="YM">-<input type="date" value="2020-12-08" id="ym" name="YM">
+             <div align="right">
+		            <input type="submit" value="출력" onclick="alert('완납증명서 출력이 완료되었습니다.')" name="print"  style="font-size: 11pt;width: 100px;">
+                    <input type="submit" value="닫기" name="exit"  style="font-size: 11pt;width:100px; ">
+                </div>
+        </fieldset>
+
+
+
+        </form>
+        </div>
+	</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>step1_납부실적발행초기</title>
+</head>
+<body bgcolor="d3d3d0">
+<form action="">
+<fieldset>
+    <legend><b>[조회 조건]</b></legend>
+    <label for="cusnum">고객번호</label>
+    <input id="cusnum" type="text">&nbsp&nbsp&nbsp&nbsp
+    <label for="date">요금년월</label>
+    <select id="date">
+        <option value="2020" selected>2020</option>
+        <option value="2019" >2019</option>
+        <option value="2018" >2018</option>
+    </select>
+    <a>년</a>
+    <select id="date">
+        <option value="12" selected>12</option>
+        <option value="11" >11</option>
+        <option value="10" >10</option>
+    </select>
+    <a>월</a>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <label><input type='checkbox' name='PrivateInfo' checked value='confirm'>개인정보보기</label>
+    <input type="submit" value="조회">
+</fieldset>
+<fieldset>
+    <legend><b>[고객사항]</b></legend>
+    <input type="radio" name="roadname">도로명<input type="radio" name="streetnum">지번
+</fieldset>
+<fieldset>
+    <legend><b>[수납사항]</b></legend>
+
+    <table>
+    <tr>
+    <td>
+    <label for="totalnum">총건수</label>
+    <input id="totalnum" type="text" style="width:120px;">
+    </td>
+
+    <td>&nbsp&nbsp
+    <label for="nopaymonth">총 미수월수</label>
+    <input id="nopaymonth" type="text" style="width:120px;">
+    <a>개월</a>
+    </td>
+
+    <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <label for="nopaytotal">총 미수요금합계</label>
+    <input id="nopaytotal" type="text">
+    <a>원</a>
+    </td>
+    </tr>
+    </table>
+
+    <div>
+        <br>
+    <textarea name="main" cols="100" rows="5">
+
+    </textarea>
+    </div>
+    <div align="right">
+    <input type="submit" value="발행"  id='print2' name="print"  style="font-size: 13pt;width: 100px;">
+    <input type="submit" value="닫기" name="exit"  style="font-size: 13pt;width:100px; ">
+    </div>
+</fieldset>
+</form>
+</body>
+</html>
